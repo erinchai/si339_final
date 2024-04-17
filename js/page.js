@@ -13,9 +13,21 @@ function SecondFunction() {
     localStorage.setItem('darkModeEnabled', document.body.classList.contains('dark-mode'));
  }
 
-   // Check if dark mode preference is stored in localStorage
+
    var darkModeEnabled = localStorage.getItem('darkModeEnabled');
    if (darkModeEnabled === 'true') {
-     // Apply dark mode if the preference is true
      document.body.classList.add('dark-mode');
    }
+
+
+var button = document.querySelector("button")
+var Clicked = false;
+button.addEventListener('click', function() {
+    Clicked = !Clicked;
+    if (Clicked) {
+        button.textContent = 'Light Mode';
+      } else {
+        button.textContent = 'Dark Mode';
+      }
+    });
+
