@@ -21,6 +21,7 @@ header {
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -75,31 +76,6 @@ body {
     background-color: lightblue;
   }
 
-body.dark-mode {
-    background-color: #1E0342;
-    color: white;
-
-    li a:visited {
-        color: white;
-    }
-    
-    li a:link {
-        color:white;
-    }
-
-    .card-back {
-        background-color: #0E46A3;
-    }
-
-    .skip:focus {
-        color: white;
-      }
-
-    .skip{
-        color:white;
-    }
-    
-}
 
 .button {
     padding: 10px 20px;
@@ -252,8 +228,8 @@ ol{
     
 }
 
-/* Calls the animation function to the logo id */
-#posters{
+
+.posters{
     animation: logoanimate 4s ease-in-out;
 
 }
@@ -271,10 +247,37 @@ ol{
 }
 
 @media (prefers-reduced-motion: reduce) {
-    #posters{
+    .posters{
         animation: none;
 
     }
+}
+
+
+body.dark-mode {
+    background-color: #1E0342;
+    color: white;
+    
+    & li a:visited {
+        color: white;
+    }
+    
+    & li a:link {
+        color:white;
+    }
+
+    & .card-back {
+        background-color: #0E46A3;
+    }
+
+    & .skip:focus {
+        color: white;
+    }
+
+    & .skip{
+        color:white;
+    }
+    
 }
 
 #card-container{
@@ -323,7 +326,6 @@ ol{
     header{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     }
 
     nav{
